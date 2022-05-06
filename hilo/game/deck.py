@@ -4,7 +4,8 @@ import random
 class Deck:
     def __init__(self, values = ["Ace","2","3","4","5","6","7","8","9","10","Jack","Queen","King"], suits = ["Spades","Hearts","Clubs","Diamonds"]):
         self.cards = []        
-        self.paramaters = [values = values, suits = suits]
+        self.paramaters.values = values
+        self.parameters.suits = suits
         self.fill()
 
     def shuffle(self):
