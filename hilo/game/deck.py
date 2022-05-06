@@ -9,10 +9,10 @@ from card import Card
 
 class Deck:
     # """A deck of playing cards
-
+    #
     # The responsibility of Deck is to manage and keep track of the types and identities of cards as
     #     well as their location within the deck, as well as the cards that have already been used.
-
+    #
     # Attributes:
     #     cards (list):         A list to contain multiple card objects that are currently in the
     #                               Deck
@@ -23,10 +23,10 @@ class Deck:
     # """
     def __init__(self, values: list = ["Ace","2","3","4","5","6","7","8","9","10","Jack","Queen","King"], suits: list = ["Spades","Hearts","Clubs","Diamonds"]):
         # """Constructs a new instance of Deck
-
+        #
         # Takes optional 'values' and 'suits' arguments to define the structure of the deck (in case
         #     this class is used for types of playing cards other than the traditional Western-52.
-        
+        #
         # Args:
         #     self (Deck):      An instance of Deck.
         #     values (list):    A list of potential face values of cards.
