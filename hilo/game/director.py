@@ -25,6 +25,7 @@ class Director:
         self.points = 300
         self.continue_playing = True
         self.score = 0
+        
 
 
 
