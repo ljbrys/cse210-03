@@ -57,6 +57,7 @@ root                    (project root folder)
 CSE210 Spring 2022 session
 Section 07, Group G
 
+- Larry Brys
 - Austin Donovan
 - Dylan Ruppell
 - Ellen Reyes-Sotelo
