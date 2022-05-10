@@ -7,7 +7,7 @@ class Director:
 
     Attributes:
 
-        continue_playing (boolean): weather or not the game is being played.
+        continue_playing (boolean): whether or not the game is being played.
         
         score (int) : The score for current round
         points (int): The current score for the entire game
@@ -36,7 +36,7 @@ class Director:
         self(Director): an instance of Director.
 
         """
-        while self.contunue_playing:
+        while self.continue_playing:
             self.display_card()
             self.players_choice()
             self.get_next_card()
@@ -44,6 +44,26 @@ class Director:
             self.play_again()
 
 
+    def get_inputs(self):
+        """Ask the user if they want to pick another card.
+        
+        Args:
+            self (Director): An instance of Director.
+        """
+        get_card = input("Pick a card? [y/n] ")
+        self.continue_playing = (get_card == "y")
+
+    def do_updates(self):
+        """Updates the player's score.
+        
+        Args:
+            self (Director): An instance of Director.
+        """
+        if not self.continue_playing:
+            return
+
+        #for i in range(len(self.))
+    
     def display_card(self):
         
         pass
