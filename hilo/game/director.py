@@ -73,7 +73,7 @@ class Director:
         #     print("Higher")
         # elif player_choice == "l".lower():
         #     print("Lower!")
-        # pass
+        pass
 
 
     def get_next_card(self):
