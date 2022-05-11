@@ -22,11 +22,8 @@ class Director:
         Args:
             self (Director)
         """
-        self.points = 300
+        self.score = 300
         self.continue_playing = True
-        self.score = 0
-
-
 
     def start_game(self):
         """
@@ -75,7 +72,8 @@ class Director:
     def get_next_card():
         pass
 
-    def calculate_score():
+    def calculate_score(self):
+        # self.score
         pass
 
     def play_again():
