@@ -91,7 +91,6 @@ class Director:
 
     def play_again(self): #I'll take a shot at this one - Matt
         
-<<<<<<< HEAD
         while self.score <= 0:
            
             answer = input(f"GAME OVER. Your score has reached 0. Would you like to play again [y/n]?")
@@ -116,10 +115,3 @@ class Director:
             
             #self.continue_playing = False
             #return print(f'Your score is 0. Game over.')
-=======
-        if self.score <= 0:
-            self.continue_playing = False
-            return print(f'Your score is 0. Game over.')
-        
-    
->>>>>>> f428ef628fd6b964f8efef81670643c454fbbac5
