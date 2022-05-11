@@ -56,6 +56,7 @@ class Director:
         it will then displauy the card
 
         """
+        
         drawn_card = self.deck.draw()
         print(drawn_card)
 
