@@ -37,6 +37,7 @@ class Director:
         self.players_choice = None
 
     def start_game(self):
+
         """
         Starts the game by running the main loop
 
@@ -79,6 +80,27 @@ class Director:
 
     def play_again(self): #I'll take a shot at this one - Matt
         
-        if self.score <= 0:
-            self.continue_playing = False
-            return print(f'Your score is 0. Game over.')
+        while self.score <= 0:
+           
+            answer = input(f"GAME OVER. Your score has reached 0. Would you like to play again [y/n]?")
+            if answer == "y":
+                 return self.start_game()
+            elif answer == "n":
+                self.continue_playing = False
+                print("Thanks for playing!")
+            else:
+                print("Please enter y or n.")
+            
+            
+            #answer = None 
+            #while answer not in ("y", "n"): 
+               #answer = input("Enter y or n:") 
+                #if answer == "y":
+                   # return start_game()
+               #elif answer == "n": 
+                    #return self.continue_playing = False
+               #else: 
+        	        #print("Please enter y or n.") 
+            
+            #self.continue_playing = False
+            #return print(f'Your score is 0. Game over.')
