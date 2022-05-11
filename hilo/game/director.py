@@ -59,7 +59,7 @@ class Director:
         """
         
         self.first_card = self.deck.draw()
-        print(self.first_card)
+        print(f"The Card is : {self.first_card}")
 
     def get_player_choice(self):
         # take, validate, store.
@@ -81,7 +81,7 @@ class Director:
         """
         
          self.second_card = self.deck.draw()
-         print(self.second_card)
+         print(f"Next card was: {self.first_card}")
         
 
     def calculate_score(self):
