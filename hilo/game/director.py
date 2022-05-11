@@ -79,7 +79,6 @@ class Director:
     def play_again(self): #I'll take a shot at this one - Matt
         
         if self.score <= 0:
+            self.continue_playing = False
             return print(f'Your score is 0. Game over.')
-            quit()
-        
-
+            
