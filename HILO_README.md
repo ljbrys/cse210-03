@@ -49,8 +49,8 @@ Python 3.10.4
 
 ## Authors
 ---
-* Nathan Roper (rop21001@byui.edu)
-* Dylan Ruppell (ruppelld@byui.edu)
-* Austin Donovan (iskarr9g@gmail.com)
-* Matt Pellét (mattpellet@byui.edu)
-* Larry Brys (bry21010@byui.edu)
+* Nathan Roper (rop21001@byui.edu) (github: nbroper, thejunioristadmin)
+* Dylan Ruppell (ruppelld@byui.edu) (github: DigitalNTT-Soul)
+* Austin Donovan (iskarr9g@gmail.com) github: lskarr)
+* Matt Pellét (mattpellet@byui.edu) (github: m4j0rCSE)
+* Larry Brys (bry21010@byui.edu) (github: ljbrys)
