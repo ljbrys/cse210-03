@@ -5,12 +5,16 @@ class Director:
     The responsibility of a director is to control the sequence of play and terminate game when 
     player no longer wants to play.
 
+
+
     Attributes:
 
         continue_playing (boolean): weather or not the game is being played.
         
         score (int) : The score for current round
         points (int): The current score for the entire game
+
+    
 
     """
 
