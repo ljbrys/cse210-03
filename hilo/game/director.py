@@ -61,12 +61,12 @@ class Director:
         self.first_card = self.deck.draw()
         print(self.first_card)
 
-    def players_choice():
-        # player_choice = int(input("Higher or Lower?"))
-        # if player_choice == "h".lower():
-        #     print("Higher")
-        # elif player_choice == "l".lower():
-        #     print("Lower!")
+    def players_choice(self):
+        self.player_choice = input("Higher or Lower?")
+        if self.player_choice == "h".lower():
+            print("Higher")
+        elif self.player_choice == "l".lower():
+            print("Lower!")
         pass
 
 
