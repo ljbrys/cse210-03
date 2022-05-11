@@ -33,6 +33,9 @@ class Director:
         self.points = 300
         self.score = 300
         self.continue_playing = True
+        self.first_card = None
+        self.second_card = None
+        self.players_choice = None
 
     def start_game(self):
         """
@@ -76,10 +79,15 @@ class Director:
         
 
     def players_choice():
-        pass
+        # player_choice = int(input("Higher or Lower?"))
+        # if player_choice == "h".lower():
+        #     print("Higher")
+        # elif player_choice == "l".lower():
+        #     print("Lower!")
+        # pass
 
 
-    def get_next_card():
+    def get_next_card(self):
         pass
 
     def calculate_score(self):
