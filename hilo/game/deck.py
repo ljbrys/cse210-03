@@ -67,8 +67,9 @@ class Deck:
         # Args:
         #     self (Deck):      An instance of Deck
         # """
-        for i in range(len(self.drawn_cards)):
-            self.cards.append(self.drawn_cards.pop())
+
+        self.cards.extend(self.drawn_cards)
+        self.drawn_cards = []
 
     def deck_check(self):
         # just here as a debug tool to optionally see the state of the cards in the deck at any given time

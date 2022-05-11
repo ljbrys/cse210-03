@@ -30,6 +30,7 @@ class Director:
 
         """
         self.deck = Deck()
+        self.deck.shuffle() #shuffle the deck before we use it
         self.score = 300
         self.continue_playing = True
         self.first_card = None
@@ -60,7 +61,7 @@ class Director:
         """
         
         self.first_card = self.deck.draw()
-        print(self.first_card)
+        print(f"The Card is : {self.first_card}")
 
     def get_player_choice(self):
         # take, validate, store.
@@ -82,11 +83,27 @@ class Director:
         """
         
          self.second_card = self.deck.draw()
-         print(self.second_card)
+         print(f"Next card was: {self.first_card}")
         
 
     def calculate_score(self):
-        # self.
+        # Dylan worked here :)
+        # still need to do math and logic here
+        first_card_numerical = self.deck.values.index(self.first_card.value)
+        second_card_numerical = self.deck.values.index(self.second_card.value)
+        if first_card_numerical == 0:
+            # If card is ace
+            first_card_numerical = 100
+            # aces high (wasn't sure the numerical value king would have, so overshot it by intention)
+
+        if second_card_numerical == 0:
+            # see if-statement above this one
+            second_card_numerical = 100
+
+        # if both cards are equal, counts as higher
+        second_card_is_higher = second_card_numerical >= first_card_numerical
+        
+
         print(f"Your score is: {self.score}")
 
     def play_again(self): #I'll take a shot at this one - Matt
