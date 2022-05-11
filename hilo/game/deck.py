@@ -21,7 +21,7 @@ class Deck:
     #     values (list):        A list of all face values present in this type of deck.
     #     suits (list):         A list of all suit identities present in this type of deck.
     # """
-    def __init__(self, values: list = ["Ace","2","3","4","5","6","7","8","9","10","Jack","Queen","King"], suits: list = ["Spades","Hearts","Clubs","Diamonds"]):
+    def __init__(self, values: list = ["Ace","2","3","4","5","6","7","8","9","10","Jack","Queen","King"], suits: list = ["♠","♥","♣","♦"]):
         # """Constructs a new instance of Deck
         #
         # Takes optional 'values' and 'suits' arguments to define the structure of the deck (in case
