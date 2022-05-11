@@ -1,10 +1,10 @@
 import random
 
 ### Use this import in the final version
-# from game.card import Card
+from game.card import Card
 
 ### Use this import for testing
-from card import Card
+#from card import Card
 
 
 class Deck:
