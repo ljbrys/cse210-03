@@ -71,7 +71,13 @@ class Director:
         #for i in range(len(self.))
     
     def display_card(self):
-        playing_deck = Deck()
+        """
+        this 
+        """
+    
+
+       drawn_card = self.deck.draw()
+       print(drawn_card)
 
         
 
