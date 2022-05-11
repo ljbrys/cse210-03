@@ -29,13 +29,6 @@ class Director:
             self (Director)
 
         """
-        self.deck = Deck()
-        self.deck.shuffle() #shuffle the deck before we use it
-        self.score = 300
-        self.continue_playing = True
-        self.first_card = None
-        self.second_card = None
-        self.players_choice = None
 
     def start_game(self):
 
@@ -46,12 +39,24 @@ class Director:
         self(Director): an instance of Director.
 
         """
-        while self.continue_playing:
-            self.display_card()
-            self.get_player_choice()
-            self.get_next_card()
-            self.calculate_score()
-            self.play_again()
+        self.deck = Deck()
+        while True:
+            self.deck.fill()
+            self.deck.shuffle()
+            self.score = 300
+            self.continue_current_round = True
+            self.continue_to_new_round = True
+            self.first_card = None
+            self.second_card = None
+            self.players_choice = None
+            while self.continue_current_round:
+                self.display_card()
+                self.get_player_choice()
+                self.get_next_card()
+                self.calculate_score()
+                self.play_again()
+            if not self.continue_to_new_round:
+                break
     
     def display_card(self):
         """
@@ -60,8 +65,12 @@ class Director:
 
         """
         
+        if len(self.deck.cards) < 2:
+            self.deck.fill()
+            self.deck.shuffle()
+
         self.first_card = self.deck.draw()
-        print(f"The Card is : {self.first_card}")
+        print(f"\nThe Card is: {self.first_card}")
 
     def get_player_choice(self):
         # take, validate, store.
@@ -70,7 +79,7 @@ class Director:
             if self.player_choice == "h" or self.player_choice == "l":
                 break
             else:
-                print("Please enter an h or l to continue...")
+                print("Invalid answer, please enter an h or an l.")
                 
 
 
@@ -83,7 +92,7 @@ class Director:
         """
         
          self.second_card = self.deck.draw()
-         print(f"Next card was: {self.first_card}")
+         print(f"Next card was: {self.second_card}")
         
 
     def calculate_score(self):
@@ -107,17 +116,6 @@ class Director:
         print(f"Your score is: {self.score}")
 
     def play_again(self): #I'll take a shot at this one - Matt
-        
-        while self.score <= 0:
-           
-            answer = input(f"GAME OVER. Your score has reached 0. Would you like to play again [y/n]?")
-            if answer == "y":
-                 return self.start_game()
-            elif answer == "n":
-                self.continue_playing = False
-                print("Thanks for playing!")
-            else:
-                print("Please enter y or n.")
             
             
             #answer = None 
@@ -132,3 +130,29 @@ class Director:
             
             #self.continue_playing = False
             #return print(f'Your score is 0. Game over.')
+        
+        if self.score <= 0:
+            self.continue_current_round = False
+            print("GAME OVER. Your score has reached 0.")
+        else:
+            while True:
+                player_plays_again = input("Play again? [y/n] ").lower()
+                if player_plays_again == 'y':
+                    break
+                elif player_plays_again == 'n':
+                    print("GAME OVER. Thanks for playing.")
+                    self.continue_current_round = False
+                    break
+                else:
+                    print("Invalid answer, please enter a y or an n.")
+
+        while not self.continue_current_round:
+            self.continue_to_new_round = input("Would you like to start a new round [y/n]? ").lower()
+            if self.continue_to_new_round == 'y':
+                break
+            elif self.continue_to_new_round == 'n':
+                self.continue_to_new_round = False
+                break
+            else:
+                print("Invalid answer, please enter a y or an n.")
+        
