@@ -82,3 +82,5 @@ class Director:
         if self.score <= 0:
             self.continue_playing = False
             return print(f'Your score is 0. Game over.')
+        
+    
