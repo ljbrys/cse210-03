@@ -48,29 +48,9 @@ class Director:
             self.get_next_card()
             self.calculate_score()
             self.play_again()
-
-
-    def get_inputs(self):
-        """Ask the user if they want to pick another card.
-        
-        Args:
-            self (Director): An instance of Director.
-        """
-        get_card = input("Pick a card? [y/n] ")
-        self.continue_playing = (get_card == "y")
-
-    def do_updates(self):
-        """Updates the player's score.
-        
-        Args:
-            self (Director): An instance of Director.
-        """
-        if not self.continue_playing:
-            return
-
-        #for i in range(len(self.))
     
     def display_card(self):
+        playing_deck = Deck()
         """
         this will draw a card from deck and store it for score calculations
         it will then displauy the card
@@ -92,7 +72,8 @@ class Director:
         pass
 
     def calculate_score(self):
-        # self.score
+        # self.
+        
         pass
 
     def play_again(self): #I'll take a shot at this one - Matt
@@ -100,4 +81,3 @@ class Director:
         if self.score <= 0:
             self.continue_playing = False
             return print(f'Your score is 0. Game over.')
-            
