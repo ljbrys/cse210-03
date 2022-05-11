@@ -27,4 +27,4 @@ class Card:
         # Args:
         #     self (Card): An instance of card
         # """
-        return f"{self.value} of {self.suit}"
+        return f"{self.value} {self.suit}"
