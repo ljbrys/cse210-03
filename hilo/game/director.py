@@ -1,3 +1,4 @@
+from cgi import print_environ_usage
 from game.card import Card
 from game.deck import Deck
 
@@ -62,12 +63,14 @@ class Director:
         print(self.first_card)
 
     def players_choice(self):
+        # take, validate, store.
         self.player_choice = input("Higher or Lower?")
         if self.player_choice == "h".lower():
-            print("Higher")
+            self.player_choice = "h"
+            print(self.player_choice)
         elif self.player_choice == "l".lower():
-            print("Lower!")
-        pass
+            self.player_choice = "l"
+
 
 
     def get_next_card(self):
