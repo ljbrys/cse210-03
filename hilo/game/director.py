@@ -74,7 +74,15 @@ class Director:
 
 
     def get_next_card(self):
-        pass
+         """
+        this will draw a card from deck and store it for score calculations
+        it will then displauy the card
+
+        """
+        
+         self.second_card = self.deck.draw()
+         print(self.second_card)
+        
 
     def calculate_score(self):
         # self.
