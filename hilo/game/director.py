@@ -65,7 +65,7 @@ class Director:
         #for i in range(len(self.))
     
     def display_card(self):
-        
+        # this is a test Larry J. Brys
         pass
 
     def players_choice():
