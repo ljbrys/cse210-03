@@ -72,13 +72,16 @@ class Director:
     
     def display_card(self):
         """
-        this 
+        this will draw a card from deck and store it for score calculations
+        it will then displauy the card
+
         """
+        drawn_card = self.deck.draw()
+        print(drawn_card)
+
     
 
-       drawn_card = self.deck.draw()
-       print(drawn_card)
-
+       
         
 
     def players_choice():
