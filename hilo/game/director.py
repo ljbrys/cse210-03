@@ -46,9 +46,6 @@ class Director:
             self.score = 300
             self.continue_current_round = True
             self.continue_to_new_round = True
-            self.first_card = None
-            self.second_card = None
-            self.players_choice = None
             while self.continue_current_round:
                 self.display_card()
                 self.get_player_choice()
@@ -75,8 +72,8 @@ class Director:
     def get_player_choice(self):
         # take, validate, store.
         while True:
-            self.player_choice = input("Higher or Lower? [h/l] ").lower()
-            if self.player_choice == "h" or self.player_choice == "l":
+            self.player_guess = input("Higher or Lower? [h/l] ").lower()
+            if self.player_guess == "h" or self.player_guess == 'l':
                 break
             else:
                 print("Invalid answer, please enter an h or an l.")
@@ -111,7 +108,17 @@ class Director:
 
         # if both cards are equal, counts as higher
         second_card_is_higher = second_card_numerical >= first_card_numerical
-        
+
+        player_guessed_hi = None
+        if self.player_guess == 'h':
+            player_guessed_hi = True
+        elif self.player_guess == 'l':
+            player_guessed_hi = False
+
+        if second_card_is_higher == player_guessed_hi:
+            self.score += 100
+        else:
+            self.score -= 75        
 
         print(f"Your score is: {self.score}")
 
