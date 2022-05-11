@@ -30,9 +30,11 @@ class Director:
 
         """
         self.deck = Deck()
-        self.points = 300
         self.score = 300
         self.continue_playing = True
+        self.first_card = None
+        self.second_card = None
+        self.player_choice = None
 
     def start_game(self):
         """
@@ -50,14 +52,12 @@ class Director:
             self.play_again()
     
     def display_card(self):
-        playing_deck = Deck()
         """
         this 
         """
-    
 
-       drawn_card = self.deck.draw()
-       print(drawn_card)
+        self.first_card = self.deck.draw()
+        print(self.first_card)
 
         
 
@@ -70,8 +70,7 @@ class Director:
 
     def calculate_score(self):
         # self.
-        
-        pass
+        print(f"Your score is: {self.score}")
 
     def play_again(self): #I'll take a shot at this one - Matt
         
