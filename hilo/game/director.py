@@ -47,7 +47,7 @@ class Director:
         """
         while self.continue_playing:
             self.display_card()
-            self.players_choice()
+            self.get_player_choice()
             self.get_next_card()
             self.calculate_score()
             self.play_again()
@@ -58,21 +58,32 @@ class Director:
         it will then displauy the card
 
         """
-
+        
         self.first_card = self.deck.draw()
         print(self.first_card)
 
-    def players_choice():
-        # player_choice = int(input("Higher or Lower?"))
-        # if player_choice == "h".lower():
-        #     print("Higher")
-        # elif player_choice == "l".lower():
-        #     print("Lower!")
-        pass
+    def get_player_choice(self):
+        # take, validate, store.
+        while True:
+            self.player_choice = input("Higher or Lower? [h/l] ").lower()
+            if self.player_choice == "h" or self.player_choice == "l":
+                break
+            else:
+                print("Please enter an h or l to continue...")
+                
+
 
 
     def get_next_card(self):
-        pass
+         """
+        this will draw a card from deck and store it for score calculations
+        it will then displauy the card
+
+        """
+        
+         self.second_card = self.deck.draw()
+         print(self.second_card)
+        
 
     def calculate_score(self):
         # Dylan worked here :)
@@ -99,3 +110,5 @@ class Director:
         if self.score <= 0:
             self.continue_playing = False
             return print(f'Your score is 0. Game over.')
+        
+    
