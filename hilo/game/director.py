@@ -78,7 +78,7 @@ class Director:
     def calculate_score():
         pass
 
-    def play_again():
+    def play_again(self):
         pass
         #I'll take a shot at this one - Matt
 
