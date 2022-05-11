@@ -31,10 +31,8 @@ class Director:
         """
         self.deck = Deck()
         self.points = 300
+        self.score = 300
         self.continue_playing = True
-        self.score = 0
-
-
 
     def start_game(self):
         """
@@ -84,9 +82,14 @@ class Director:
     def get_next_card():
         pass
 
-    def calculate_score():
+    def calculate_score(self):
+        # self.score
         pass
 
-    def play_again():
-        pass
+    def play_again(self): #I'll take a shot at this one - Matt
+        
+        if self.score <= 0:
+            return print(f'Your score is 0. Game over.')
+            quit()
+        
 
