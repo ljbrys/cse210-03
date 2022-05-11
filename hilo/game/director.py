@@ -1,4 +1,9 @@
+from game.card import Card
+from game.deck import Deck
+
+
 class Director:
+
     """
     An instance that directs the card game
 
@@ -11,6 +16,7 @@ class Director:
         
         score (int) : The score for current round
         points (int): The current score for the entire game
+        deck 
 
     """
 
@@ -21,7 +27,10 @@ class Director:
 
         Args:
             self (Director)
+
         """
+        self.deck = Deck()
+        self.points = 300
         self.score = 300
         self.continue_playing = True
 
@@ -41,8 +50,9 @@ class Director:
             self.play_again()
     
     def display_card(self):
-        # this is a test Larry J. Brys
-        pass
+        playing_deck = Deck()
+
+        
 
     def players_choice():
         pass
@@ -56,6 +66,15 @@ class Director:
         
         pass
 
+<<<<<<< HEAD
     def play_again():
         pass
         #I'll take a shot at this one - Matt
+=======
+    def play_again(self): #I'll take a shot at this one - Matt
+        
+        if self.score <= 0:
+            self.continue_playing = False
+            return print(f'Your score is 0. Game over.')
+            
+>>>>>>> 54986e03c2054e5f1f77db764424b716d13ee41e
