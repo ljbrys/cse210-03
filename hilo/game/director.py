@@ -51,6 +51,13 @@ class Director:
     
     def display_card(self):
         playing_deck = Deck()
+        """
+        this 
+        """
+    
+
+       drawn_card = self.deck.draw()
+       print(drawn_card)
 
         
 
@@ -67,14 +74,21 @@ class Director:
         pass
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     def play_again():
         pass
         #I'll take a shot at this one - Matt
 =======
+=======
+>>>>>>> c1102fcfe65e9daaff39dd6130f963db9916667b
     def play_again(self): #I'll take a shot at this one - Matt
         
         if self.score <= 0:
             self.continue_playing = False
             return print(f'Your score is 0. Game over.')
+<<<<<<< HEAD
             
 >>>>>>> 54986e03c2054e5f1f77db764424b716d13ee41e
+=======
+            
+>>>>>>> c1102fcfe65e9daaff39dd6130f963db9916667b
